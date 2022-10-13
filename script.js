@@ -6,6 +6,10 @@ const square = document.getElementById("square");
 const circle = document.getElementById("circle");
 const rangeValue = document.getElementById("range-span");
 
+circle.style.height = range.value + '%';
+circle.style.width = range.value + '%';
+rangeValue.textContent = `${inputRange.value}%`;
+
 const changeCollor = function () {
     if (inputText.value === "") return;
     square.style.backgroundColor = inputText.value;
@@ -14,7 +18,7 @@ const changeCollor = function () {
 const changeCircle = function () {
     circle.style.width = `${inputRange.value}%`;
     circle.style.height = `${inputRange.value}%`;
-    rangeValue.textContent = inputRange.value;
+    rangeValue.textContent = `${inputRange.value}%`;
 }
 
 button.addEventListener('click', changeCollor);
